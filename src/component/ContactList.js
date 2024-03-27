@@ -1,15 +1,16 @@
 import { Button, Form } from "react-bootstrap";
 import SearchBox from "./SearchBox";
 import ContactItem from "./ContactItem";
+import { useSelector } from "react-redux";
 
 const ContactList = () => {
+  const contactList = useSelector(state => state.contactList)
   return (
     <div>
       <SearchBox/>
-      <ContactItem/>
-      <ContactItem/>
-      <ContactItem/>
-      <ContactItem/>
+      {contactList.map((item)=> (
+        <ContactItem item={item}/>
+      ))}
     </div>
   )
 }

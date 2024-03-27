@@ -10,7 +10,6 @@ const ContactForm = () => {
   const addContact = (event) =>{
     event.preventDefault()
     dispatch({type: "ADD_CONTACT", payload: {name, phoneNumber}})
-
   }
   return (
     <div>
