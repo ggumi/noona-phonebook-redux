@@ -1,6 +1,7 @@
 // reducer가 state를 바꿔야 함
 let initialState = {
-  contactList: []
+  contactList: [],
+  keyword:'',
 }
 
 function reducer(state = initialState, action) {
@@ -9,7 +10,12 @@ function reducer(state = initialState, action) {
     case "ADD_CONTACT":
       return {
         ...state,
-        contactList: [...state.contactList, {name: payload.name, phoneNumber: payload.phoneNumber}]
+        contactList: [...state.contactList, {name: payload.name, phoneNumber: payload.phoneNumber}],
+      }
+    case "SEARCH_BY_USERNAME":
+      return {
+        ...state,
+        keyword: payload.keyword
       }
     default:
       return {
