@@ -1,7 +1,6 @@
 import './App.css';
 import { Col, Container, Row } from "react-bootstrap";
 import ContactForm from './component/ContactForm'
-import SearchBox from "./component/SearchBox";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ContactList from "./component/ContactList";
 /**
