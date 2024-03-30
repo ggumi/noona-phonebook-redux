@@ -8,8 +8,6 @@ const SearchBox = () => {
   let { contactList } = useSelector(state => state)
   const searchByName = (event)=> {
     event.preventDefault()
-    let payload = contactList.filter(contact=>contact.name.includes(keyword))
-    console.log("payload==",payload)
     dispatch({ type: "SEARCH_BY_USERNAME", payload: { keyword } })
   }
   return (

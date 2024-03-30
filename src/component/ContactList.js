@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useState, useEffect } from "react"
 
 const ContactList = () => {
+    console.log("컴포넌트 시작")
   const { contactList, keyword } = useSelector(state => state)
   let [ filteredList, setFilteredList ] = useState([])
   useEffect(() => {
@@ -13,6 +14,7 @@ const ContactList = () => {
     } else {
       setFilteredList(contactList)
     }
+    console.log("UseEffect 내부")
   }, [keyword, contactList]);
 
   return (
